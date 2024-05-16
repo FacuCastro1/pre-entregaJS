@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Descripcion del sitio -->
-    <meta name="description" content="">
+    <meta name="description" content="Bienvenido a La Cabra Jerseys, tu destino número uno para encontrar las camisetas de fútbol más exclusivas. Explora nuestro catálogo y encuentra la camiseta perfecta para llevar tu pasión por tu equipo favorito contigo a todos lados">
     <!-- Descripcion del sitio -->
 
     <!--Keywords-->
@@ -16,11 +16,23 @@
     <link rel="stylesheet" href="style.css">
     <!--CSS-->
 
+    <!--Google Fonts Marca-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+    <!--Google Fonts Marca-->
+
+    <!--Google Fonts Intro-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Google Fonts Intro-->
+
     <!--Open Graph-->
-    <meta property="og:image" content="">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="">
-    <meta property="og:title" content="">
+    <meta property="og:image" content="https://static.vecteezy.com/system/resources/previews/005/009/939/original/goat-logo-design-free-vector.jpg">
+    <meta property="og:url" content="https://juancastro15.github.io/PreEntrega2-CastroMartinez-Javascript/">
+    <meta property="og:description" content="Encontra las mejores camisetas de fútbol de los equipos mas importantes de Europa al mejor precio">
+    <meta property="og:title" content="La Cabra Jerseys, donde compran los mejores">
     <!--Open Graph-->
 
     <!--Icono de la pestana-->
@@ -29,10 +41,10 @@
 
     <title>La Cabra Jerseys</title>
 </head>
-<body>
+<body class="color">
 
     <!--Inicio de Nuestro Header-->
-    <header>
+    <header class="brand">
         <div>
             <img src="logos/cabra-logo-yellow.png" alt="el logo de nuestra pagina">
             <h1>La Cabra Jerseys</h1>
@@ -41,37 +53,51 @@
     <!--fin del Header-->
 
     <!--Inicio de la introduccion-->
-    <section>
+    <section class="intro">
         <div>
-            
+            <p>¡Ey, qué onda, gente! ¡Bienvenidos a La Cabra Jerseys, la onda más copada para conseguir tus camisetas más zarpadas! En nuestro catálogo vas a encontrar todo lo que necesitás para reventarla en cualquier ocasión. Desde diseños re locos hasta clásicos con un toque distinto, ¡acá tenés de todo para brillar en cualquier lado! Dale, date una vuelta por nuestro catálogo y encontrá esa camiseta que te va a hacer romperla. ¡No te lo pierdas, hermano!</p>
         </div>
     </section>
     <!--Inicio de la introduccion-->
     
     <!-- Inicio del Main -->
-    <main>
-        <h2>Catálogo de Camisetas</h2>
-        <ul>
-            <li>Real Madrid - $50</li>
-            <li>Barcelona - $45</li>
-            <li>Manchester United - $40</li>
-            <li>Juventus - $55</li>
-            <li>Bayern Munich - $60</li>
-            <li>Liverpool - $50</li>
-            <li>Paris Saint-Germain - $55</li>
-            <li>Manchester City - $45</li>
-        </ul>
+    <main class="cata">
+        <h2>Nuestro Catalogo</h2>
+        <!-- Agrega un input para el buscador -->
+        <input type="text" id="buscador" placeholder="Buscar producto...">
+        <div id="contenedorProductos"></div>
     </main>
     <!-- Fin del Main -->
+    
+    <!-- Inicio del carrito -->
+    <aside id="carrito">
+        <button id="toggleCarrito"><img src="logos/carrito-logo.png" alt="Icono de carrito"></button>
+        <div id="contenidoCarrito">
+            <table id="tablaCarrito">
+                <tbody id="listaCarrito"></tbody>
+            </table>
+            <p id="totalCarrito">Total: $0</p>
+        </div>
+    </aside>
+    <!-- Fin del carrito -->
 
-    <!--Inicio de nuestro Footer-->
-    <footer>
+    <!-- Inicio seccion de proximamente-->
+    <section class="novedades">
         <div>
-            <p>DERECHOS DE AUTOR RESERVADOS A LA CABRA JERSEYS</p>
+            <h5>proximamente</h5>
+            <p>¡Agarrate fuerte que esto recién empieza! Pronto vas a ver mucho más, ¡no te duermas!</p>
+        </div>
+    </section>
+    <!-- Fin seccion de proximamente-->
+    
+    <!--Inicio de nuestro Footer-->
+    <footer class="copyr">
+        <div>
+            <p>Derechos de autor reservados La Cabra Corp ®</p>
         </div>
     </footer>
     <!--Fin de nuestro Footer-->
-
+    
     <script src="./script.js"></script>
 </body>
 </html>
