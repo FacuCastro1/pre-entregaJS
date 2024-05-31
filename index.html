@@ -30,7 +30,7 @@
 
     <!--Open Graph-->
     <meta property="og:image" content="https://static.vecteezy.com/system/resources/previews/005/009/939/original/goat-logo-design-free-vector.jpg">
-    <meta property="og:url" content="https://juancastro15.github.io/PreEntrega2-CastroMartinez-Javascript/">
+    <meta property="og:url" content="https://juancastro15.github.io/ProyectoFinal-CastroMartinez-Javascript/">
     <meta property="og:description" content="Encontra las mejores camisetas de fútbol de los equipos mas importantes de Europa al mejor precio">
     <meta property="og:title" content="La Cabra Jerseys, donde compran los mejores">
     <!--Open Graph-->
@@ -39,6 +39,14 @@
     <link rel="shortcut icon" href="goat-lg.ico" type="image/x-icon">
     <!--Icono de la pestana-->
 
+    <!-- Libreria Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> 
+    <!-- Libreria Toastify -->
+
+    <!-- Libreria Sweet2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Libreria Sweet2 -->
+
     <title>La Cabra Jerseys</title>
 </head>
 <body class="color">
@@ -46,7 +54,7 @@
     <!--Inicio de Nuestro Header-->
     <header class="brand">
         <div>
-            <img src="./logo/cabra-logo-yellow.png" alt="el logo de nuestra pagina">
+            <img src="logos/cabra-logo-yellow.png" alt="el logo de nuestra pagina">
             <h1>La Cabra Jerseys</h1>
         </div>
     </header>
@@ -64,14 +72,24 @@
     <main class="cata">
         <h2>Nuestro Catalogo</h2>
         <!-- Agrega un input para el buscador -->
-        <input type="text" id="buscador" placeholder="Buscar producto...">
+        <div class="buscador-container">
+            <input type="text" id="buscador" placeholder="Buscar producto...">
+            <select id="filtros">
+                <option value="">Todos</option>
+                <option value="Camiseta">Camisetas</option>
+                <option value="Bufanda">Bufandas</option>
+                <option value="Gorra">Gorras</option>
+                <option value="Shorts">Shorts</option>
+                <option value="Piluso">Pilusos</option>
+            </select>
+        </div>
         <div id="contenedorProductos"></div>
     </main>
     <!-- Fin del Main -->
     
     <!-- Inicio del carrito -->
     <aside id="carrito">
-        <button id="toggleCarrito"><img src="./logo/carrito-logo.png" alt="Icono de carrito"></button>
+        <button id="toggleCarrito"><img src="logos/carrito-logo.png" alt="Icono de carrito"></button>
         <div id="contenidoCarrito">
             <table id="tablaCarrito">
                 <tbody id="listaCarrito"></tbody>
@@ -98,6 +116,7 @@
     </footer>
     <!--Fin de nuestro Footer-->
     
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
